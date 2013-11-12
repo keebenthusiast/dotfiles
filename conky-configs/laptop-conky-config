@@ -1,0 +1,65 @@
+double_buffer yes
+background yes
+use_xft yes
+xftfont Bitstream Vera Sans Mono:size=10
+xftalpha 0.8
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+own_window_colour black
+own_window_hints undecorated,below,skip_taskbar,sticky,skip_pager
+minimum_size 250 50
+maximum_width 250
+minimum_width 250
+draw_shades no
+draw_outline no
+draw_borders no
+stippled_borders 0
+border_margin 6
+border_width 1 
+default_color slategrey
+default_shade_color lightgrey
+default_outline_color red
+alignment top_right
+gap_x 20
+gap_y 20
+no_buffers yes
+uppercase no
+
+${color green}
+${color green}
+${stippled_hr 2 1}
+${color}host:${color green} ${nodename} 
+${color}os:  ${color green} ${sysname} ${kernel}
+${color}hz:  ${color green} ${freq}Mhz ${color green}
+$hr
+${color}date:    ${color green}${time %a,} ${time %B %e %G}
+${color}time:    ${color green}${time %H:%M:%S} ${color green}
+
+${color}uptime: ${color green} $uptime ${color green}
+$stippled_hr
+${color}ram:  ${color green} $memperc% $membar
+${color}used/total: ${color green} $mem/$memmax
+
+${color}Active processes: ${color green} $processes
+$stippled_hr
+${color}cpu:
+
+${color}Core 0:  ${color green} ${cpu cpu0}% ${cpubar cpu0}
+${color}Core 1:   ${color green}${cpu cpu1}% ${cpubar cpu1} 
+${color}cpu temp: ${color green}${execpi 10 sensors k10temp-* | awk '/temp1/ {print substr($2,2)}' | head -1}         
+${color green}$stippled_hr
+${color}home: ${color green}${fs_free /home} ${fs_bar /home}
+$hr
+${color}eth0:
+${color}down:  ${color green}${downspeed eth0}/s ${color} 
+up:    ${color green}${upspeed eth0}/s 
+#${color #888888}${downspeedgraph eth0 20,70 ff0000 0000ff}${color green}   ${color #888888}${upspeedgraph eth0 20,70 0000ff ff0000}${color green} 
+
+${color}wlan0:
+${color}down: ${color green} ${downspeed wlan0}/s ${color}  
+up:   ${color green} ${upspeed wlan0}/s
+#${color #888888}${downspeedgraph wlan0 20,70 ff0000 0000ff}   ${color #888888}${upspeedgraph wlan0 20,70 0000ff ff0000}
+${color green}${stippled_hr 2 1}
