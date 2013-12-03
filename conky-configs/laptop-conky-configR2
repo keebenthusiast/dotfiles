@@ -46,7 +46,6 @@ ${color}Storage: free | total
 / ${color green}${fs_free /} | ${fs_size /}
 
 ${color}Network: down | up
-
 ${color}eth0:
 ${color green}${downspeed eth0}/s  | ${upspeed eth0}/s  
 
