@@ -1,0 +1,65 @@
+double_buffer yes
+background yes
+use_xft yes
+xftfont Bitstream Vera Sans Mono:size=10
+xftalpha 0.8
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+own_window_colour black
+own_window_hints undecorated,below,skip_taskbar,sticky,skip_pager
+minimum_size 250 50
+maximum_width 250
+minimum_width 250
+draw_shades no
+draw_outline no
+draw_borders no
+stippled_borders 0
+border_margin 6
+border_width 1
+default_color slategrey
+default_shade_color lightgrey
+default_outline_color green
+alignment top_right
+gap_x 20
+gap_y 20
+no_buffers yes
+uppercase no
+TEXT
+
+${color}date:   ${color green}${time %a,} ${time %B%e %G}
+${color}time:   ${color green}${time %H:%M:%S} ${color green}
+${color}uptime:${color green} $uptime ${color green}
+
+${color}ram:   used  | total   perc
+${color green}     $mem | $memmax  $memperc%
+${color}Active processes: ${color green} $processes
+
+${color}cpu:
+${color}Core0:  ${color green} ${cpu cpu0}% 
+${color}Core0 Temp: ${color green} ${exec sensors | awk '/Core 0/ {print substr($3,2,4)}'} C 
+${color}Core1:   ${color green}${cpu cpu1}% 
+${color}Core1 Temp: ${color green} ${exec sensors | awk '/Core 1/ {print substr($3,2,4)}'} C
+${color}Core2:  ${color green} ${cpu cpu2}% 
+${color}Core2 Temp: ${color green} ${exec sensors | awk '/Core 2/ {print substr($3,2,4)}'} C
+${color}Core3:   ${color green}${cpu cpu3}% 
+${color}Core3 Temp: ${color green} ${exec sensors | awk '/Core 3/ {print substr($3,2,4)}'} C
+${color}hz:     ${color green} ${freq}Mhz          
+
+${color}gpu:
+${color}GPU 0 load:  ${color green}${execi 1 aticonfig --odgc | egrep -i "load|temperature" | xargs echo | awk '{print $4 "" ""}'}
+${color}GPU 0 temp:	${color green} ${execi 1 aticonfig --odgc --odgt --adapter=0 | egrep -i "load|temperature" | xargs echo | awk '{print "" $9 ""}'} C
+
+${color}Storage: free | total 
+/ ${color green}${fs_free /} | ${fs_size /}
+${color}/media/sdb1 ${color green}${fs_free /media/sdb1} | ${fs_size /media/sdb1}
+${color}/media/sdc1 ${color green}${fs_free /media/sdc1} | ${fs_size /media/sdc1}
+
+${color}Network: down | up
+${color}eth0:
+${color green}${downspeed eth0}/s  | ${upspeed eth0}/s  
+
+${color}wlan0:
+${color green}${downspeed wlan0}/s | ${upspeed wlan0}/s
