@@ -49,8 +49,8 @@ ${color}Core3 Temp: ${color green} ${exec sensors | awk '/Core 3/ {print substr(
 ${color}hz:     ${color green} ${freq}Mhz          
 
 ${color}gpu:
-${color}GPU 0 load:  ${color green}${execi 1 aticonfig --odgc | egrep -i "load|temperature" | xargs echo | awk '{print $4 "" ""}'}
-${color}GPU 0 temp:	${color green} ${execi 1 aticonfig --odgc --odgt --adapter=0 | egrep -i "load|temperature" | xargs echo | awk '{print "" $9 ""}'} C
+${color}GPU0 load:   ${color green}${execi 1 aticonfig --odgc | egrep -i "load|temperature" | xargs echo | awk '{print $4 "" ""}'}
+${color}GPU0 temp:	 ${color green} ${execi 1 aticonfig --odgc --odgt --adapter=0 | egrep -i "load|temperature" | xargs echo | awk '{print "" $9 ""}'} C
 
 ${color}Storage: free | total 
 / ${color green}${fs_free /} | ${fs_size /}
