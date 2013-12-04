@@ -38,13 +38,13 @@ ${color green}     $mem | $memmax  $memperc%
 ${color}Active processes: ${color green} $processes
 
 ${color}cpu:
-${color}Core0:  ${color green} ${cpu cpu0}% 
+${color}Core0:  ${color green} ${cpu cpu1}% 
 ${color}Core0 Temp: ${color green} ${exec sensors | awk '/Core 0/ {print substr($3,2,4)}'} C 
-${color}Core1:   ${color green}${cpu cpu1}% 
+${color}Core1:   ${color green}${cpu cpu2}% 
 ${color}Core1 Temp: ${color green} ${exec sensors | awk '/Core 1/ {print substr($3,2,4)}'} C
-${color}Core2:  ${color green} ${cpu cpu2}% 
+${color}Core2:  ${color green} ${cpu cpu3}% 
 ${color}Core2 Temp: ${color green} ${exec sensors | awk '/Core 2/ {print substr($3,2,4)}'} C
-${color}Core3:   ${color green}${cpu cpu3}% 
+${color}Core3:   ${color green}${cpu cpu4}% 
 ${color}Core3 Temp: ${color green} ${exec sensors | awk '/Core 3/ {print substr($3,2,4)}'} C
 ${color}hz:     ${color green} ${freq}Mhz          
 

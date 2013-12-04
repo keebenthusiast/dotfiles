@@ -38,8 +38,8 @@ ${color green}      $mem | $memmax  $memperc%
 ${color}Active processes: ${color green} $processes
 
 ${color}cpu:
-${color}Core0:  ${color green} ${cpu cpu0}%
-${color}Core1:   ${color green}${cpu cpu1}%
+${color}Core0:  ${color green} ${cpu cpu1}%
+${color}Core1:   ${color green}${cpu cpu2}%
 ${color}hz:     ${color green} ${freq}Mhz          
 
 ${color}Storage: free | total 
