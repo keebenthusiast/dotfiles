@@ -1,0 +1,110 @@
+##############################################
+# Tint2 config
+# by CSCoder4ever
+#
+# forked from the tint2 example from
+# the Tint2 google code site
+##############################################
+
+# ID 1
+rounded = 7
+border_width = 2
+background_color = #000000 60
+border_color = #ffffff 18
+
+# ID 2
+rounded = 5
+border_width = 0
+background_color = #ffffff 40
+border_color = #ffffff 50
+
+# ID 3
+rounded = 5
+border_width = 0
+background_color = #ffffff 18
+border_color = #ffffff 70
+
+# Panel
+panel_monitor = 1
+panel_position = bottom center
+panel_size = 90% 35
+panel_margin = 0 0
+panel_padding = 7 0
+font_shadow = 0
+panel_background_id = 1
+wm_menu = 1
+panel_dock = 0
+panel_layer = bottom
+
+# Taskbar
+taskbar_mode = single_desktop
+taskbar_padding = 2 3 2
+taskbar_background_id = 0
+
+# Tasks
+task_icon = 1
+task_text = 1
+task_maximum_size = 140 35
+task_centered = 1
+task_padding = 6 3
+task_font = sans 7
+task_font_color = #ffffff 70
+task_background_id = 3
+task_icon_asb = 100 0 0
+task_active_background_id = 2
+task_active_font_color = #ffffff 85
+task_active_icon_asb = 100 0 0
+urgent_nb_of_blink = 8
+
+# System Tray
+systray = 1
+systray_padding = 0 4 5
+systray_background_id = 0
+systray_sort = left2right
+systray_icon_size = 0
+systray_icon_asb = 100 0 0
+
+# Clock
+time1_format = %H:%M
+time1_font = sans 8
+time2_format = %A %d %B
+time2_font = sans 6
+clock_font_color = #ffffff 76
+clock_padding = 1 0
+clock_background_id = 0
+clock_rclick_command = orage
+
+# Battery
+battery = 0
+battery_hide = 98
+battery_low_status = 10
+battery_low_cmd = notify-send "battery low"
+bat1_font = sans 8
+bat2_font = sans 6
+battery_font_color = #ffffff 76
+battery_padding = 1 0
+battery_background_id = 0
+
+# Tooltip
+tooltip = 0
+tooltip_padding = 2 2
+tooltip_show_timeout = 0.7
+tooltip_hide_timeout = 0.3
+tooltip_background_id = 1
+tooltip_font_color = #OOOOOO 80
+tooltip_font = sans 10
+
+# Mouse
+mouse_middle = none
+mouse_right = none
+mouse_scroll_up = toggle
+mouse_scroll_down = iconify
+
+# Autohide
+autohide = 1
+autohide_show_timeout = 0.3
+autohide_hide_timeout = 2
+autohide_height = 2
+strut_policy = minimum
+
+# end of config
