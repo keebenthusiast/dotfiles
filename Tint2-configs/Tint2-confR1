@@ -1,9 +1,6 @@
 ##############################################
 # Tint2 config
 # by CSCoder4ever
-#
-# forked from the tint2 example from
-# the Tint2 google code site
 ##############################################
 
 # ID 1
@@ -27,7 +24,7 @@ border_color = #ffffff 70
 # Panel
 panel_monitor = 1
 panel_position = bottom center
-panel_size = 90% 35
+panel_size = 90% 40
 panel_margin = 0 0
 panel_padding = 7 0
 font_shadow = 0
@@ -43,9 +40,9 @@ taskbar_background_id = 0
 
 # Tasks
 task_icon = 1
-task_text = 1
-task_maximum_size = 140 35
-task_centered = 1
+task_text = 0
+task_maximum_size = 50 35
+task_centered = 0
 task_padding = 6 3
 task_font = sans 7
 task_font_color = #ffffff 70
