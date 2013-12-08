@@ -29,9 +29,9 @@ no_buffers yes
 uppercase no
 TEXT
 
-${color}date:   ${color green}${time %a,} ${time %B%e %G}
-${color}time:   ${color green}${time %H:%M:%S} ${color green}
-${color}uptime:${color green} $uptime ${color green}
+${color}date:   ${color green}${time %a, %B%e %G}
+${color}time:   ${color green}${time %H:%M:%S}
+${color}uptime:${color green} $uptime
 
 ${color}ram:   used  | total   perc
 ${color green}     $mem | $memmax  $memperc%
