@@ -29,7 +29,7 @@ no_buffers yes
 uppercase no
 TEXT
 
-${color}date:   ${color green}${time %a, %B%e %G}
+${color}date:   ${color green}${time %a, %B %e %G}
 ${color}time:   ${color green}${time %H:%M:%S}
 ${color}uptime:${color green} $uptime
 
@@ -56,6 +56,9 @@ ${color}Storage: free | total
 / ${color green}${fs_free /} | ${fs_size /}
 ${color}/media/sdb1 ${color green}${fs_free /media/sdb1} | ${fs_size /media/sdb1}
 ${color}/media/sdc1 ${color green}${fs_free /media/sdc1} | ${fs_size /media/sdc1}
+${color}/media/sdd1 ${color green}${fs_free /media/sdd1} | ${fs_size /media/sdd1}
+#${color}server ${color green}${fs_free NFS-mount-here} | ${fs_size NFS-mount-here}
+#${color}freeNAS ${color green}${fs_free /home/sweetieb3ll} | ${fs_size /home/sweetieb3ll}
 
 ${color}Network: down | up
 ${color}eth0:
