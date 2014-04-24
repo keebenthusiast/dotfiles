@@ -1,0 +1,9 @@
+background no
+out_to_x no
+out_to_console yes
+update_interval 1
+total_run_times 0
+use_spacer none
+
+TEXT
+^fg(\#07fb10)uptime: $uptime | CPU: ${cpu cpu0}% | Temp: ${exec sensors | awk '/Core 0/ {print substr($3,2,4)}'} C | memory: $mem/$memmax | Battery: ${battery_percent BAT1}% | server ${fs_free /home/CAKServer}/${fs_size /home/CAKServer} | wlan0: ${downspeed wlp3s0}/s
