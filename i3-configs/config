@@ -203,6 +203,9 @@ exec --no-startup-id nitrogen --restore
 # network-manager-applet
 exec --no-startup-id nm-applet
 
+# dzen2 conky startup
+exec --no-startup-id zconky
+
 # arandr preferences
 for_window [class="Arandr"] floating enable; focus mode_toggle
 
@@ -210,7 +213,7 @@ for_window [class="Arandr"] floating enable; focus mode_toggle
 for_window [class="Lxappearance"] floating enable; focus mode_toggle
 
 # thunar float
-#for_window [class="Thunar"] floating enable; focus mode_toggle
+for_window [class="Thunar"] floating enable; focus mode_toggle
 
 # viewnior float
 for_window [class="Viewnior"] floating enable; focus mode_toggle
@@ -220,19 +223,22 @@ for_window [class="Viewnior"] floating enable; focus mode_toggle
 
 # pavucontrol float && start pulseaudio
 exec --no-startup-id pulseaudio --start
-for_window [class="Pavucontrol"] floating enable; focus mode_toggle
+for_window [class="Pavucontrol"] floating enable; focus mode_toggle;
 
 # xfce4-volumed autostart && pnmixer autostart
 exec --no-startup-id xfce4-volumed
 exec --no-startup-id pnmixer
 
 # sakura float
-for_window [class="Sakura"] floating enable; focus mode_toggle
+for_window [class="Sakura"] floating enable; focus mode_toggle;
+
+# zandronum float
+for_window [class="Zandronum"] floating enable; focus mode_toggle;
 
 # gimp float
-for_window [class="Gimp"] floating enable; focus mode_toggle
+for_window [class="Gimp"] floating enable; focus mode_toggle;
 
-# thunderbird float
+# Thunderbird float
 for_window [class="Thunderbird"] floating enable; focus mode_toggle;
 
 # firefox float
@@ -248,14 +254,23 @@ exec --no-startup-id compton --config /home/cak/.config/compton.conf -b
 #for_window [class="Gparted"] floating enable; focus mode_toggle;
 
 # galculator float
-for_window [class="Galculator"] floating enable;
+for_window [class="Galculator"] floating enable; focus mode_toggle;
 
 # nitrogen float
-for_window [class="Nitrogen"] floating enable;
+for_window [class="Nitrogen"] floating enable; focus mode_toggle;
+
+# conky float
+for_window [class="Conky"] floating enable;
 
 # wireshark float
 #for_window [class="Wireshark"] floating enable;
 
 # system-config-samba float && system-config-printer floats
-for_window[class="System-config-samba"] floating enable;
-for_window[class="System-config-printer"] floating enable;
+for_window[class="System-config-samba"] floating enable; focus mode_toggle
+for_window[class="System-config-printer"] floating enable; focus mode_toggle
+
+# Skype float
+#for_window[class="Skype"] floating enable;border none; focus mode_toggle;
+
+# Archive Manager float
+for_window[class="File-roller"] floating enable; focus mode_toggle
