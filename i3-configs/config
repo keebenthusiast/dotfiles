@@ -192,10 +192,15 @@ bar {
 for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggle
 
 # xfce4-power-manager
-exec --no-startup-id xfce4-power-manager
+#exec --no-startup-id xfce4-power-manager
 
 # audacious float
 for_window [class="Audacious"] floating enable;border none; focus mode_toggle
+
+# tilda
+
+#exec --no-startup-id tilda
+#for_window [class="Tilda" instance="dropdown"] floating enable; border none;
 
 # Nitrogen restore wallpapers
 exec --no-startup-id nitrogen --restore
@@ -243,6 +248,7 @@ for_window [class="Thunderbird"] floating enable; focus mode_toggle;
 
 # firefox float
 #for_window [class="Firefox"] floating enable; focus mode_toggle;
+for_window [class="Firefox Preferences"] floating enable; focus mode_toggle;
 
 # compton autostart
 exec --no-startup-id compton --config /home/cak/.config/compton.conf -b 
@@ -259,9 +265,6 @@ for_window [class="Galculator"] floating enable; focus mode_toggle;
 # nitrogen float
 for_window [class="Nitrogen"] floating enable; focus mode_toggle;
 
-# conky float
-for_window [class="Conky"] floating enable;
-
 # wireshark float
 #for_window [class="Wireshark"] floating enable;
 
@@ -274,3 +277,12 @@ for_window[class="System-config-printer"] floating enable; focus mode_toggle
 
 # Archive Manager float
 for_window[class="File-roller"] floating enable; focus mode_toggle
+
+# gtk-recordMyDesktop float
+for_window[class="Gtk-recordMyDesktop"] floating enable; focus mode_toggle
+
+# remmina float
+for_window[class="Remmina"] floating enable; focus mode_toggle
+
+# Virtualbox float
+for_window[class="VirtualBox"] floating enable; focus mode_toggle
