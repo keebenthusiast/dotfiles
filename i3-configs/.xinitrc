@@ -10,4 +10,4 @@ exec dbus-launch i3 # Default WM
 
 #compton --vsync opengl
 
-compton --config <home/cak/.config/compton.conf> -b
+compton --config <$HOME/.config/compton.conf> -b
