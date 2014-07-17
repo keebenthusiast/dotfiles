@@ -20,6 +20,10 @@ LOGIND=/etc/systemd/logind.conf
 echo "starting NetworkManager"
 systemctl enable NetworkManager
 
+# edit fstab to make sure everything is ship-shape
+
+$EDITOR /etc/fstab
+
 # edit logind file to fix suspend issue with xfce4-power-manager
 $EDITOR $LOGIND -nw
 
