@@ -4,7 +4,7 @@ Script to setup an HTPC running Ubuntu or Ubuntu's derivatives.
 
 clone repo:
 
-<code>git clone https://github.com/CSCoder4ever/cscoder-files</code>
+<code>git clone https://github.com/CSCoder4ever/cscoder-files.git</code>
 
 change to repo's directory:
 
