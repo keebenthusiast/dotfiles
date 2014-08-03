@@ -29,7 +29,7 @@ $EDITOR $LOGIND -nw
 
 # install a couple programs from the AUR with packer
 echo "Installing a couple programs from the AUR"
-packer -S pnmixer compton xfce4-volumed ld-lsb
+packer -S pnmixer compton xfce4-volumed ld-lsb arch-install-scripts
 
 # mount the server and copy everything to the following directories.
 echo "mounting server.. "
