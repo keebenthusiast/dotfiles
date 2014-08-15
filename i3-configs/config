@@ -187,6 +187,16 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+	  colors {
+    	  background #aeb2c3
+    	  statusline #000000
+
+    	  # color_class      border  backg.  text
+    	  focused_workspace  #204560 #384560 #f0d830
+    	  active_workspace   #686868 #aeb2c3 #222222
+    	  inactive_workspace #686868 #aeb2c3 #222222
+    	  urgent_workspace   #2f343a #aeb2c3 #ffffff
+	  }
 }
 
 #start tint2
