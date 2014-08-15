@@ -37,13 +37,14 @@ bindsym Mod4+t exec sakura
 bindsym Mod4+e exec thunderbird
 
 # start emacs text editor
-bindsym Mod4+c exec terminator --command="emacs -nw"
+#bindsym Mod4+c exec terminator --command="emacs -nw"
+bindsym Mod4+c exec emacs
 
 # start thunar
 bindsym Mod4+f exec thunar
 
 # start Midnight Commander
-bindsym Mod4+Shift+f exec terminator --command="mc"
+bindsym Mod4+Shift+f exec terminator --command="mc -b"
 
 # start audacious
 bindsym Mod4+m exec audacious
@@ -144,7 +145,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 # below is border colors
 # class                 border  backgr. text    indicator
-client.focused          #000000 #121212 #ffffff #2e9ef4
+client.focused          #000000 #696969 #ffffff #2e9ef4
 client.focused_inactive #000000 #5f676a #ffffff #484e50
 client.unfocused        #000000 #222222 #ffffff #292d2e
 client.urgent           #000000 #ff0000 #ffffff #900000
@@ -188,19 +189,29 @@ bar {
         status_command i3status
 }
 
+#start tint2
+#exec --no-startup-id tint2
+
 # xfce4-notify
-for_window [class="Xfce4-notifyd"] floating enable;border none; focus mode_toggle
+for_window [class="Xfce4-notifyd"] floating enable; border none;
 
 # xfce4-power-manager
 #exec --no-startup-id xfce4-power-manager
 
 # audacious float
-for_window [class="Audacious"] floating enable;border none; focus mode_toggle
+for_window [class="Audacious"] floating enable; border none; focus mode_toggle
 
 # tilda
-
 #exec --no-startup-id tilda
 #for_window [class="Tilda" instance="dropdown"] floating enable; border none;
+
+# Border preferences
+#for_window [class="^.*"] border pixel 1;
+#for_window [class="^.*"] border none;
+
+# Terminator border preference
+for_window [class="Terminator"] border pixel 1;
+for_window [class="Sakura"] border none;
 
 # Nitrogen restore wallpapers
 exec --no-startup-id nitrogen --restore
