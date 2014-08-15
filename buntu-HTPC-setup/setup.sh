@@ -4,7 +4,7 @@
 # To be run as root.
 
 # check if the user is root
-if [ "$( id -u )"	 != 0 ]; then 
+if [ "$( id -u )" != 0 ]; then 
 	echo "Script needs to be run as root."
   	exit 1
 fi
