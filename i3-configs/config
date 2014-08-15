@@ -189,11 +189,11 @@ bar {
         status_command i3status
 	  colors {
     	  background #000000
-    	  statusline #696969
+    	  statusline #999999
 
     	  # color_class      border  backg.  text
-    	  focused_workspace  #121212 #696969 #000000
-    	  active_workspace   #121212 #696969 #000000
+    	  focused_workspace  #696969 #696969 #000000
+    	  active_workspace   #696969 #696969 #000000
     	  inactive_workspace #696969 #000000 #ffffff
     	  urgent_workspace   #121212 #ff0000 #ffffff
 	  }
