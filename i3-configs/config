@@ -145,9 +145,9 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 # below is border colors
 # class                 border  backgr. text    indicator
-client.focused          #000000 #696969 #ffffff #2e9ef4
-client.focused_inactive #000000 #5f676a #ffffff #484e50
-client.unfocused        #000000 #222222 #ffffff #292d2e
+client.focused          #000000 #000000 #ffffff #2e9ef4
+client.focused_inactive #000000 #696969 #ffffff #484e50
+client.unfocused        #000000 #696969 #ffffff #292d2e
 client.urgent           #000000 #ff0000 #ffffff #900000
 
 # reload the configuration file
@@ -195,7 +195,7 @@ bar {
     	  focused_workspace  #696969 #696969 #000000
     	  active_workspace   #696969 #696969 #000000
     	  inactive_workspace #696969 #000000 #ffffff
-    	  urgent_workspace   #121212 #ff0000 #ffffff
+    	  urgent_workspace   #696969 #ff0000 #ffffff
 	  }
 }
 
