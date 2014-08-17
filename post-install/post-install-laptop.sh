@@ -10,7 +10,7 @@ if [ "$( id -u )" != 0 ]; then
     exit 1
 fi
 
-EDITOR=emacs # change to favorite text editor
+EDITOR=emacs -nw # change to favorite text editor
 SERVERIP=127.0.0.1 # change to server's proper IP
 MNTPT=/hdd1 # change to appropriate nfs share location
 BACKUPLOC=/.backups-system-files/`hostname` # change as needed!
@@ -19,13 +19,13 @@ LOGIND=/etc/systemd/logind.conf
 # start network manager
 echo "starting NetworkManager"
 systemctl enable NetworkManager
+systemctl start NetworkManager
 
 # edit fstab to make sure everything is ship-shape
-
 $EDITOR /etc/fstab
 
 # edit logind file to fix suspend issue with xfce4-power-manager
-$EDITOR $LOGIND -nw
+$EDITOR $LOGIND
 
 # install a couple programs from the AUR with packer
 echo "Installing a couple programs from the AUR"
@@ -44,9 +44,17 @@ cp /mnt$BACKUPLOC/etc /etc
 echo "copying data to /usr"
 cp -r /mnt$BACKUPLOC/usr /usr
 
+echo "unmount /mnt"
+umount /mnt
+
+# Remove scripts since they will no longer be necessary
+echo "removing script"
+rm /etc/post-install.sh
+rm /usr/bin/post-install
+
 echo "Process is complete!"
 
 read -p "reboot now? y/n: " exitR
-if [ "$exitR" = "y" ]; then
+if [[ "$exitR" = "y" || "$exitR" = "Y" ]]; then
     reboot
 fi
