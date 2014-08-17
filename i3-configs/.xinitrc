@@ -1,13 +1,19 @@
-#if [[ $1 == "-rp" || $1 == "--ratpoison" ]] # If ratpoison is selected, it goes there instead.
-#    exec dbus-launch ratpoison
-#fi
+#!/bin/sh
+#
+# ~/.xinitrc
+#
+# Executed by startx (run your window manager from here)
 
-exec dbus-launch i3 # Default WM
+if [ -d /etc/X11/xinit/xinitrc.d ]; then
+  for f in /etc/X11/xinit/xinitrc.d/*; do
+    [ -x "$f" ] && . "$f"
+  done
+  unset f
+fi
 
-#exec dbus-launch ratpoison
-
-#xcompmgr -c &
-
-#compton --vsync opengl
-
-compton --config <$HOME/.config/compton.conf> -b
+# exec gnome-session
+# exec startkde
+# exec startxfce4
+# ...or the Window Manager of your choice
+exec dbus-launch i3
+#exec dbus-launch dwm

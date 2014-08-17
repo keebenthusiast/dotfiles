@@ -217,10 +217,10 @@ for_window [class="Audacious"] floating enable; border none; focus mode_toggle
 
 # Border preferences
 #for_window [class="^.*"] border pixel 1;
-#for_window [class="^.*"] border none;
+for_window [class="^.*"] border none;
 
 # Terminator border preference
-for_window [class="Terminator"] border pixel 1;
+#for_window [class="Terminator"] border pixel 1;
 for_window [class="Sakura"] border none;
 
 # Nitrogen restore wallpapers
