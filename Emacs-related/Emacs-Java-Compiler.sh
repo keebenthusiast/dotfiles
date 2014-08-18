@@ -25,7 +25,7 @@ fi
 if [[ "$1" == "-a" || "$1" == "-A" || "$1" == "--all-files" ]]; then
     for classFile in *.class
     do
-	rm *.class
+	rm $classFile
     done
     
     for file in *.java
@@ -42,7 +42,7 @@ fi
 if [[ "$1" == "-ax" || "$1" == "-AX" || "$1" == "--allx-files" ]]; then
     for classFile in *.class
     do
-	rm *.class
+	rm $classFile
     done 
     
     for file in *.java
