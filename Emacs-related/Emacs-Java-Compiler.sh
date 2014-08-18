@@ -14,7 +14,7 @@ if [[ "$1" == "-h" || "$1" == "-H" || "$1" == "--help" || "$1" == "--Help" ]]; t
 fi
 
 if [[ "$1" == "-x" || "$1" == "-X" ]]; then
-    [ -f "$(basename $2 .class)" ] && rm $(basename $2 .java).class
+    [ -f "$(basename $2 .java).class" ] && rm $(basename $2 .java).class
     echo "Compiling $2 ... "
     javac $2
     echo "Executing Java Swing program ... "
@@ -23,9 +23,12 @@ if [[ "$1" == "-x" || "$1" == "-X" ]]; then
 fi
 
 if [[ "$1" == "-a" || "$1" == "-A" || "$1" == "--all-files" ]]; then
-    [ -f "$(basename $2 .class)" ] && rm $(basename $2 .java).class
+    for classFile in *.class
+    do
+	rm *.class
+    done
     
-    for file in *java
+    for file in *.java
     do
 	echo "Compiling $file ... "
 	javac $file
@@ -37,9 +40,12 @@ if [[ "$1" == "-a" || "$1" == "-A" || "$1" == "--all-files" ]]; then
 fi
 
 if [[ "$1" == "-ax" || "$1" == "-AX" || "$1" == "--allx-files" ]]; then
-    [ -f "$(basename $2 .class)" ] && rm $(basename $2 .java).class
+    for classFile in *.class
+    do
+	rm *.class
+    done 
     
-    for file in *java
+    for file in *.java
     do
 	echo "Compiling $file ... "
 	javac $file
@@ -50,7 +56,8 @@ if [[ "$1" == "-ax" || "$1" == "-AX" || "$1" == "--allx-files" ]]; then
     exit
 fi
 
-[ -f "$(basename $1 .class)" ] && rm $(basename $1 .class)
+[ -f "$(basename $1 .java).class" ] && rm $(basename $1 .java).class
+echo "$(basename $1 .java).class"
 
 echo "Compiling $1 ... "
 javac $1
