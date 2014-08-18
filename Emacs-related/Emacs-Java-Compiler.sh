@@ -6,10 +6,11 @@ if [[ "$1" == "-h" || "$1" == "-H" || "$1" == "--help" || "$1" == "--Help" ]]; t
     echo "Usage: emacsjavac [ options ]"
     echo 
     echo "options: "
-    echo "-x                  compile javax program."
+    echo "-x                  compile and execute java swing program."
     echo "-h, --help          you are here."
-    echo "-a, --all-files     compile all files in directory."
-    echo "-ax, --allx-files   compile all javax files in directory"
+    echo "-a, --all-files     compile all files in directory and execute selected file."
+    echo "-ax, --allx-files   compile all java swing files in directory and execute selected file."
+    echo "-c, --compile-only  compile all java files only."
     exit
 fi
 
@@ -39,7 +40,24 @@ if [[ "$1" == "-a" || "$1" == "-A" || "$1" == "--all-files" ]]; then
     exit
 fi
 
-if [[ "$1" == "-ax" || "$1" == "-AX" || "$1" == "--allx-files" ]]; then
+if [[ "$1" == "-a" || "$1" == "-A" || "$1" == "--all-files" ]]; then
+    for classFile in *.class
+    do
+	rm $classFile
+    done
+    
+    for file in *.java
+    do
+	echo "Compiling $file ... "
+	javac $file
+    done
+
+    echo "-----------OUTPUT-----------"
+    java $(basename $2 .java)
+    exit
+fi
+
+if [[ "$1" == "-c" || "$1" == "-C" || "$1" == "--compile-only" ]]; then
     for classFile in *.class
     do
 	rm $classFile
@@ -51,8 +69,7 @@ if [[ "$1" == "-ax" || "$1" == "-AX" || "$1" == "--allx-files" ]]; then
 	javac $file
     done
 
-    echo "Executing Java Swing program ... "
-    java $(basename $2 .java)
+    echo "Completed ... "
     exit
 fi
 
