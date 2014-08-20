@@ -30,13 +30,13 @@ no_buffers yes
 uppercase no
 TEXT
 
-${color}date:   ${alignr}${color green}${time %a,} ${time %B %e %G}
+${color}date:   ${alignr}${color green}${time %a, %B %e %G}
 ${color}time:   ${alignr}${color green}${time %H:%M:%S} 
-${color}uptime:${color green}${alignr} $uptime 
+${color}uptime: ${alignr}${color green} $uptime 
 
 ${color}ram:  ${alignr} used  | total   perc
-${color green}  ${alignr}   $mem | $memmax  $memperc%
-${color}Active processes:$alignr ${color green} $processes
+${color green}${alignr}   $mem | $memmax  $memperc%
+${color}Active processes:${color green}${alignr}  $processes
 
 ${color}cpu:
 ${color}Core0:  ${color green} ${cpu cpu1}% ${cpubar cpu1}
