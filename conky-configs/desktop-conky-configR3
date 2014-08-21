@@ -10,7 +10,7 @@ own_window_type desktop
 own_window_transparent yes
 own_window_colour black
 own_window_hints undecorated,below,skip_taskbar,sticky,skip_pager
-minimum_size 250 50
+minimum_size 240 50
 maximum_width 240
 minimum_width 240
 draw_shades no
