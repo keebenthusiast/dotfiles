@@ -19,11 +19,19 @@ apt-get install libdvdread4 libdvdnav4
 
 # for some reason libdvdcss2 has no installation candidate,
 # so the deb will need to be downloaded and installed.
-wget http://download.videolan.org/pub/debian/stable/libdvdcss2_1.2.13-0_amd64.deb
 
-# comment the line above and uncomment the line below to download the 32-bit of
-# the deb.
-#wget http://download.videolan.org/pub/debian/stable/libdvdcss2_1.2.13-0_i386.deb
+case $(uname -m) in
+   "x86_64") echo "downloading amd64 file ..." 
+	wget http://download.videolan.org/pub/debian/stable/libdvdcss2_1.2.13-0_amd64.deb
+	;;
+   "i*86") echo "downloading i386 file ..." 
+	wget http://download.videolan.org/pub/debian/stable/libdvdcss2_1.2.13-0_i386.deb
+	;;
+   *) echo "invalid or unknown architecture" 
+	exit
+	;;
+esac
+
 dpkg -i libdvdcss2*.deb
 
 # install libdvdcss
