@@ -21,10 +21,10 @@ apt-get install libdvdread4 libdvdnav4
 # so the deb will need to be downloaded and installed.
 
 case $(uname -m) in
-   "x86_64") echo "downloading amd64 file ..." 
+   x86_64) echo "downloading amd64 file ..." 
 	wget http://download.videolan.org/pub/debian/stable/libdvdcss2_1.2.13-0_amd64.deb
 	;;
-   "i*86") echo "downloading i386 file ..." 
+   i*86) echo "downloading i386 file ..." 
 	wget http://download.videolan.org/pub/debian/stable/libdvdcss2_1.2.13-0_i386.deb
 	;;
    *) echo "invalid or unknown architecture" 
