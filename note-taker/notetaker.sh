@@ -18,6 +18,12 @@ fi
 #nano notes$CURRENT_DATE
 #$EDITOR notes$CURRENT_DATE
 
+if [[ $1 == "-2" || $1 == "--dir2" ]]; then
+    cd $NOTE_DIR2
+    emacs notes$CURRENT_DATE
+    exit 0
+fi
+
 if [[ $1 == "-3" || $1 == "--dir3" ]]; then
     cd $NOTE_DIR3
     $EDITOR notes$CURRENT_DATE
