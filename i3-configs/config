@@ -57,6 +57,10 @@ bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
 bindsym XF86AudioMute exec amixer -q -D pulse set Master toggle
 
+# Open Galculator
+bindsym XF86Calculator exec galculator
+# In the case of a Poker II keyboard, this can be accessed using Fn+y
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
