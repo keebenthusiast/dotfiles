@@ -14,14 +14,20 @@ fi
 DBUS=dbus-launch
 session=${1:i3}
 
+# To make this possible, Copy the following file
+
+# cp /etc/X11/xinit/xserverrc ~/.xserverrc 
+
+#then use either of the following commands:
+
+# xinit $WMorDE
+# startx ~/.xinitrc $WMorDE
+
 case $session in
-    i3  ) exec $DBUS i3 
+    i3|i3wm ) exec $DBUS i3 
 	;;
-    dwm ) exec $DBUS dwm 
+    dwm|DWM ) exec $DBUS dwm 
 	;;
-    *   ) echo "invalid WM or DE, executing Default" && exec $DBUS i3 
+    *       ) exec $DBUS $1
 	;;
 esac
-
-#exec dbus-launch i3
-#exec dbus-launch dwm
