@@ -47,6 +47,11 @@ cp -r /mnt$BACKUPLOC/usr /usr
 echo "unmount /mnt"
 umount /mnt
 
+# Create group git and add the current user to it
+groupadd git
+gpasswd -a $USER git
+git config --global core.sharedRepository group
+
 # Remove scripts since they will no longer be necessary
 echo "removing script"
 rm /etc/post-install.sh
