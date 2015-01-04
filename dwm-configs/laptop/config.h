@@ -17,21 +17,23 @@ static const Bool topbar            = False;     /* False means bottom bar */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
-	/* class         instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",        NULL,       NULL,       0,            True,        -1 },
-	{ "Firefox",     NULL,       NULL,       1,            True,        -1 },
-	{ "Eclipse",     NULL,       NULL,       4,            True,        -1 },
-	{ "Sakura",      NULL,       NULL,       0,            True,        -1 },
-	{ "Thunderbird", NULL,       NULL,       0,            True,        -1 },
-	{ "Nitrogen",    NULL,       NULL,       0,            True,        -1 },
-	{ "Viewnior",    NULL,       NULL,       0,            True,        -1 },
-	{ "Audacious",   NULL,       NULL,       0,            True,        -1 },
-	{ "Thunar",      NULL,       NULL,       0,            True,        -1 },
-	{ "Steam",       NULL,       NULL,       2,            True,        -1 },
-	{ "Tilda",       NULL,       NULL,      ~0,            True,        -1 },
-	{ "Gparted",     NULL,       NULL,       0,            True,        -1 },
-	{ "VirtualBox",  NULL,       NULL,       5,            True,        -1 },
-	{ "Galculator",  NULL,       NULL,       0,            True,        -1 },
+	/* class          instance    title       tags mask     isfloating   monitor */
+	{ "Gimp",         NULL,       NULL,       0,            True,        -1 },
+	{ "Firefox",      NULL,       NULL,       1,            True,        -1 },
+	{ "Eclipse",      NULL,       NULL,       4,            True,        -1 },
+	{ "Sakura",       NULL,       NULL,       0,            True,        -1 },
+	{ "Thunderbird",  NULL,       NULL,       0,            True,        -1 },
+	{ "Nitrogen",     NULL,       NULL,       0,            True,        -1 },
+	{ "Viewnior",     NULL,       NULL,       0,            True,        -1 },
+	{ "Audacious",    NULL,       NULL,       0,            True,        -1 },
+	{ "Thunar",       NULL,       NULL,       0,            True,        -1 },
+	{ "Steam",        NULL,       NULL,       2,            True,        -1 },
+	{ "Tilda",        NULL,       NULL,      ~0,            True,        -1 },
+	{ "Gparted",      NULL,       NULL,       0,            True,        -1 },
+	{ "VirtualBox",   NULL,       NULL,       5,            True,        -1 },
+	{ "Galculator",   NULL,       NULL,       0,            True,        -1 },
+	{ "Lxappearance", NULL,       NULL,       0,            True,        -1 },
+	{ "Pavucontrol",  NULL,       NULL,       0,            True,        -1 },
 };
 
 /* layout(s) */
