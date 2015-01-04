@@ -1,12 +1,12 @@
-/* See LICENSE file for copyright and license details. */
+  /* See LICENSE file for copyright and license details. */
 
 /* appearance */
 static const char font[]            = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";
 static const char normbordercolor[] = "#444444";
 static const char normbgcolor[]     = "#222222";
 static const char normfgcolor[]     = "#bbbbbb";
-static const char selbordercolor[]  = "#005577";
-static const char selbgcolor[]      = "#005577";
+static const char selbordercolor[]  = "#005500";
+static const char selbgcolor[]      = "#005500";
 static const char selfgcolor[]      = "#eeeeee";
 static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -20,12 +20,18 @@ static const Rule rules[] = {
 	/* class         instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",        NULL,       NULL,       0,            True,        -1 },
 	{ "Firefox",     NULL,       NULL,       1,            True,        -1 },
+	{ "Eclipse",     NULL,       NULL,       4,            True,        -1 },
 	{ "Sakura",      NULL,       NULL,       0,            True,        -1 },
 	{ "Thunderbird", NULL,       NULL,       0,            True,        -1 },
 	{ "Nitrogen",    NULL,       NULL,       0,            True,        -1 },
+	{ "Viewnior",    NULL,       NULL,       0,            True,        -1 },
 	{ "Audacious",   NULL,       NULL,       0,            True,        -1 },
 	{ "Thunar",      NULL,       NULL,       0,            True,        -1 },
+	{ "Steam",       NULL,       NULL,       2,            True,        -1 },
 	{ "Tilda",       NULL,       NULL,      ~0,            True,        -1 },
+	{ "Gparted",     NULL,       NULL,       0,            True,        -1 },
+	{ "VirtualBox",  NULL,       NULL,       5,            True,        -1 },
+	{ "Galculator",  NULL,       NULL,       0,            True,        -1 },
 };
 
 /* layout(s) */
