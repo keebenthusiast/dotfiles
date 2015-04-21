@@ -1,0 +1,39 @@
+double_buffer yes
+background yes
+use_xft yes
+xftfont Bitstream Vera Sans Mono:size=10
+xftalpha 0.8
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_type desktop
+own_window_transparent yes
+own_window_colour black
+own_window_hints undecorated,below,skip_taskbar,sticky,skip_pager
+minimum_size 250 50
+maximum_width 250
+minimum_width 250
+draw_shades no
+draw_outline no
+draw_borders no
+stippled_borders 0
+border_margin 6
+border_width 1
+default_color green
+default_shade_color lightgrey
+default_outline_color green
+alignment top_right
+gap_x 20
+gap_y 20
+no_buffers yes
+uppercase no
+TEXT
+${ALIGNR}${time %a %b %d %H:%M}
+${ALIGNR}$uptime
+${ALIGNR}${cpu cpu1}% ${cpu cpu2}%
+${ALIGNR}${acpitemp}c
+${ALIGNR}$memperc% $mem/$memmax
+${ALIGNR}${fs_free /home/CAKServer}/${fs_size /home/CAKServer}
+${ALIGNR}${battery_percent BAT1}%
+${ALIGNR}${upspeed wlan1}/s
+${ALIGNR}${downspeed wlan1}/s
