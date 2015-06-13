@@ -31,13 +31,13 @@ TEXT
 ${ALIGNR}${time %a %b %d %I:%M%P}
 ${ALIGNR}$uptime
 ${ALIGNR}${cpu cpu1}% ${cpu cpu2}% ${cpu cpu3}% ${cpu cpu4}%
-${ALIGNR}${cpu cpu5}% ${cpu cpu6}% ${cpu cpu7}% ${cpu cpu8}%
+${ALIGNR}${cpu cpu5}% ${cpu cpu6}% ${cpu cpu7}% ${cpu cpu8}% # if your CPU is an 8350 or an i7 w/ hyperthreading
 ${ALIGNR}${exec sensors | awk '/Core 0/ {print substr($3,2,4)}'}c ${exec sensors | awk '/Core 1/ {print substr($3,2,4)}'}c ${exec sensors | awk '/Core 2/ {print substr($3,2,4)}'}c ${exec sensors | awk '/Core 3/ {print substr($3,2,4)}'}c
 ${ALIGNR}$memperc% $mem/$memmax
 ${ALIGNR}${fs_free /}/${fs_size /}
 ${ALIGNR}${fs_free /media/sdb1}/${fs_size /media/sdb1}
 ${ALIGNR}${fs_free /media/sdc1}/${fs_size /media/sdc1}
-${ALIGNR}${fs_free /home/CAKServer}/${fs_size /home/CAKServer}
+${ALIGNR}${fs_free /home/nfsmount}/${fs_size /home/nfsmount}
 ${ALIGNR}${upspeed eth0}/s 
 ${ALIGNR}${downspeed eth0}/s 
 ${ALIGNR}${upspeed wlan0}/s 
