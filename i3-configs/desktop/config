@@ -251,8 +251,9 @@ assign [class="^Parole$"] 6
 
 # tilda
 #exec --no-startup-id tilda
+exec --no-startup-id yakuake
 #for_window [class="Tilda" instance="dropdown"] floating enable; border none;
-#for_window [class="Yakuake" instance="dropdown"] floating enable; border none;
+for_window [class="Yakuake"] floating enable; border none;
 
 # Border preferences
 #for_window [class="^.*"] border pixel 1;
