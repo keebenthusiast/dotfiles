@@ -46,7 +46,7 @@ bindsym Mod4+c exec emacs
 bindsym Mod4+f exec thunar
 
 # start Midnight Commander
-bindsym Mod4+Shift+f exec terminator --command="mc -b"
+#bindsym Mod4+Shift+f exec terminator --command="mc -b"
 
 # start audacious
 bindsym Mod4+m exec audacious
@@ -269,7 +269,7 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id nm-applet
 
 # dzen2 conky startup
-#exec --no-startup-id zconky
+exec --no-startup-id dzconky
 
 # arandr preferences
 for_window [class="Arandr"] floating enable; focus mode_toggle
