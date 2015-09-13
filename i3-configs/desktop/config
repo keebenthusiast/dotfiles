@@ -261,7 +261,7 @@ for_window [class="^.*"] border none;
 
 # Terminator border preference
 #for_window [class="Terminator"] border pixel 1;
-for_window [class="Sakura"] border none;
+for_window [class="Sakura"] border none; focus mode_toggle
 
 # Nitrogen restore wallpapers
 exec --no-startup-id nitrogen --restore
@@ -300,6 +300,7 @@ for_window [class="Sakura"] floating enable; focus mode_toggle;
 
 # zandronum float
 for_window [class="^Zandronum"] floating enable; focus mode_toggle;
+for_window [class="^zandronum"] floating enable; focus mode_toggle;
 #for_window [class="^Doomseeker"] floating enable; focus mode_toggle;
 
 # gimp float
@@ -323,7 +324,7 @@ exec --no-startup-id compton --config /home/cak/.config/compton.conf -b
 #for_window [class="Jgrasp"] floating enable; focus mode_toggle;
 
 # gparted float
-for_window [class="^Gparted.*$"] floating enable; focus mode_toggle;
+for_window [class="^GParted.*$"] floating enable; focus mode_toggle;
 
 # galculator float
 for_window [class="Galculator"] floating enable; focus mode_toggle;
