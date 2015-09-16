@@ -127,46 +127,46 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace 0
+bindsym $mod+2 workspace 1
+bindsym $mod+3 workspace 2
+bindsym $mod+4 workspace 3
+bindsym $mod+5 workspace 4
+bindsym $mod+6 workspace 5
+bindsym $mod+7 workspace 6
+bindsym $mod+8 workspace 7
+bindsym $mod+9 workspace 8
+bindsym $mod+0 workspace 9
 
 # assign workspaces to their monitor
 # HDMI-0 DVI-I-1
 # Main   Secondary
 
 # Primary
+workspace 0 output HDMI-0
 workspace 1 output HDMI-0
 workspace 2 output HDMI-0
 workspace 3 output HDMI-0
 workspace 4 output HDMI-0
-workspace 5 output HDMI-0
 
 # Secondary
+workspace 5 output DVI-I-1
 workspace 6 output DVI-I-1
 workspace 7 output DVI-I-1
 workspace 8 output DVI-I-1
 workspace 9 output DVI-I-1
-workspace 10 output DVI-I-1
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace 0
+bindsym $mod+Shift+2 move container to workspace 1
+bindsym $mod+Shift+3 move container to workspace 2
+bindsym $mod+Shift+4 move container to workspace 3
+bindsym $mod+Shift+5 move container to workspace 4
+bindsym $mod+Shift+6 move container to workspace 5
+bindsym $mod+Shift+7 move container to workspace 6
+bindsym $mod+Shift+8 move container to workspace 7
+bindsym $mod+Shift+9 move container to workspace 8
+bindsym $mod+Shift+0 move container to workspace 9
 
 
 # below is border colors
@@ -241,13 +241,13 @@ for_window [class="Xfce4-notifyd"] floating enable; border none;
 
 # audacious float, assign to workspace 6
 for_window [class="Audacious"] floating enable; border none; focus mode_toggle
-assign [class="^Audacious$"] 6
+assign [class="^Audacious$"] 5
 
 # vlc float, assign to workspace 6
 for_window[class="Vlc"] floating enable; border none; focus mode_toggle
 for_window[class="Parole"] floating enable; border none; focus mode_toggle
-assign [class="^Vlc$"] 6
-assign [class="^Parole$"] 6
+assign [class="^Vlc$"] 5
+assign [class="^Parole$"] 5
 
 # tilda
 #exec --no-startup-id tilda
@@ -315,7 +315,7 @@ for_window [class="Firefox.*"] floating enable; focus mode_toggle;
 
 # steam float, assign to workspace 2
 for_window [class="Steam.*"] floating enable; focus mode_toggle;
-assign [class="Steam.*"] 2
+assign [class="Steam.*"] 1
 
 # compton autostart
 exec --no-startup-id compton --config /home/cak/.config/compton.conf -b 
@@ -353,4 +353,4 @@ for_window[class="Remmina"] floating enable; focus mode_toggle
 
 # Virtualbox float
 for_window[class="VirtualBox"] floating enable; focus mode_toggle
-assign [class="^VirtualBox$"] 4
+assign [class="^VirtualBox$"] 3
