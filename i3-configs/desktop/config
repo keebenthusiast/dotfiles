@@ -310,12 +310,14 @@ for_window [class="Gimp"] floating enable; focus mode_toggle;
 for_window [class="Thunderbird"] floating enable; focus mode_toggle;
 
 # firefox float
-#for_window [class="Firefox"] floating enable; focus mode_toggle;
-for_window [class="Firefox.*"] floating enable; focus mode_toggle;
+#for_window [class="Firefox.*"] floating enable; focus mode_toggle;
+for_window [class="Places.*"] floating enable; focus mode_toggle;
 
 # steam float, assign to workspace 2
 for_window [class="Steam.*"] floating enable; focus mode_toggle;
 assign [class="Steam.*"] 1
+# startup steam
+exec --no-startup-id steam
 
 # compton autostart
 exec --no-startup-id compton --config /home/cak/.config/compton.conf -b 
@@ -328,6 +330,9 @@ for_window [class="^GParted.*$"] floating enable; focus mode_toggle;
 
 # galculator float
 for_window [class="Galculator"] floating enable; focus mode_toggle;
+
+# brasero float
+for_window [class="brasero"] floating enable; focus mode_toggle;
 
 # nitrogen float
 for_window [class="Nitrogen"] floating enable; focus mode_toggle;
@@ -350,6 +355,9 @@ for_window[class="File-roller"] floating enable; focus mode_toggle
 
 # remmina float
 for_window[class="Remmina"] floating enable; focus mode_toggle
+
+# logisim float
+for_window[class="^.*logisim.*$"] floating enable; focus mode_toggle
 
 # Virtualbox float
 for_window[class="VirtualBox"] floating enable; focus mode_toggle
