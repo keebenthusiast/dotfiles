@@ -142,16 +142,16 @@ bindsym $mod+0 workspace 9
 # HDMI-0 DVI-I-1
 # Main   Secondary
 
-# Primary
+# Main
 workspace 0 output HDMI-0
 workspace 1 output HDMI-0
 workspace 2 output HDMI-0
 workspace 3 output HDMI-0
 workspace 4 output HDMI-0
+workspace 5 output HDMI-0
+workspace 6 output HDMI-0
 
 # Secondary
-workspace 5 output DVI-I-1
-workspace 6 output DVI-I-1
 workspace 7 output DVI-I-1
 workspace 8 output DVI-I-1
 workspace 9 output DVI-I-1
@@ -233,6 +233,9 @@ bar {
 #start tint2 panel
 #exec --no-startup-id tint2 --disable-wm-check
 
+# Quake2 float
+for_window [class="quake2"] floating enable; border none;
+
 # xfce4-notify
 for_window [class="Xfce4-notifyd"] floating enable; border none;
 
@@ -241,13 +244,13 @@ for_window [class="Xfce4-notifyd"] floating enable; border none;
 
 # audacious float, assign to workspace 6
 for_window [class="Audacious"] floating enable; border none; focus mode_toggle
-assign [class="^Audacious$"] 5
+assign [class="^Audacious$"] 7
 
 # vlc float, assign to workspace 6
 for_window[class="Vlc"] floating enable; border none; focus mode_toggle
 for_window[class="Parole"] floating enable; border none; focus mode_toggle
-assign [class="^Vlc$"] 5
-assign [class="^Parole$"] 5
+assign [class="^Vlc$"] 7
+assign [class="^Parole$"] 7
 
 # tilda
 #exec --no-startup-id tilda
@@ -310,8 +313,9 @@ for_window [class="Gimp"] floating enable; focus mode_toggle;
 for_window [class="Thunderbird"] floating enable; focus mode_toggle;
 
 # firefox float
-#for_window [class="Firefox.*"] floating enable; focus mode_toggle;
-for_window [class="Places.*"] floating enable; focus mode_toggle;
+for_window [class="Firefox.*"] floating enable; focus mode_toggle;
+#for_window [class="^Places"] floating enable; focus mode_toggle;
+#for_window [class="^Navigator"] floating enable; focus mode_toggle;
 
 # steam float, assign to workspace 2
 for_window [class="Steam.*"] floating enable; focus mode_toggle;
@@ -339,6 +343,10 @@ for_window [class="Nitrogen"] floating enable; focus mode_toggle;
 
 # wireshark float
 for_window [class="Wireshark"] floating enable;
+
+# UT2k4-related floats
+for_window [class="SDL_App"] floating enable; focus mode_toggle
+
 
 # system-config-samba float && system-config-printer floats
 for_window[class="System-config-samba"] floating enable; focus mode_toggle
