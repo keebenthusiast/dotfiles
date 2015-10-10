@@ -290,9 +290,10 @@ for_window [class="Viewnior"] floating enable; focus mode_toggle
 # leafpad float
 #for_window [class="Leafpad"] floating enable; focus mode_toggle
 
-# pavucontrol float && start pulseaudio
+# pavucontrol float && start pulseaudio && pnmixer float
 exec --no-startup-id pulseaudio --start
 for_window [class="Pavucontrol"] floating enable; focus mode_toggle;
+for_window [class="Pnmixer"] floating enable; focus mode_toggle;
 
 # xfce4-volumed autostart && pnmixer autostart
 exec --no-startup-id xfce4-volumed
