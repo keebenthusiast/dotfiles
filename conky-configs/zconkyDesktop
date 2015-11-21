@@ -1,0 +1,20 @@
+#!/bin/sh
+#ALIGN="left"
+#FONT="unicode-8"
+#conky | dzen2 -fn $FONT
+
+# depends on DzenConkyBar to be the primary conky file.
+
+RC="$HOME/.conkyrc"
+FG="white"
+BG="#000000"
+#BG="#FFFFFF"
+ALIGN="right"
+WIDTH="1200"
+HEIGHT="18"
+FONT="-*-cure-medium-*-*-*-11-*-*-*-*-*-*-*"
+XPOS="2640" 
+YPOS="1080"
+
+exec conky -d -c $RC | dzen2 -fg $FG -bg $BG -ta $ALIGN -w $WIDTH -h $HEIGHT -x $XPOS -y $YPOS -fn $FONT &
+exit 0
